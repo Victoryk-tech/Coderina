@@ -42,6 +42,7 @@ const Activity = () => {
             <Image
               className=""
               src={activeImg}
+              alt=""
               // style={{ backgroundImage: `url("${activeImg}")` }}
             />
             <Stack>

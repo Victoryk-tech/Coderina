@@ -3,6 +3,7 @@ import React from "react";
 import Grid from "@mui/material/Grid2";
 import CustomButton from "../../Home/components/CustomButton";
 import legoCard from "../../../public/lego-card3.png";
+import Image from "next/image";
 
 const LegoCard3 = () => {
   return (
@@ -21,7 +22,7 @@ const LegoCard3 = () => {
         <CustomButton bold>Start a team</CustomButton>
       </Grid>
       <Grid size={{ xs: 12, md: 5.4 }}>
-        <img src={legoCard} alt="" />
+        <Image src={legoCard} alt="" />
       </Grid>
     </Grid>
   );

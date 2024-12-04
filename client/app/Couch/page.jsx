@@ -78,8 +78,8 @@ const Couch = () => {
                 {info.title}
               </Typography>
               <Stack>
-                {info.content.map((content) => (
-                  <Stack className="couch__text">
+                {info.content.map((content, id) => (
+                  <Stack className="couch__text" key={id}>
                     <Typography component={info.type}></Typography>
                     <Typography fontSize={{ xs: "14px", md: "16px" }}>
                       {content}

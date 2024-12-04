@@ -3,12 +3,13 @@ import Grid from "@mui/material/Grid2";
 import { Typography } from "@mui/material";
 import CustomButton from "../../Home/components/CustomButton";
 import legoCard from "../../../public/lego-card2.png";
+import Image from "next/image";
 
 const LegoCard2 = () => {
   return (
     <Grid container className="lego__card">
       <Grid size={{ xs: 12, md: 5.4 }}>
-        <img src={legoCard} alt="" />
+        <Image src={legoCard} alt="legocard" />
       </Grid>
       <Grid size={{ xs: 12, md: 5.6 }}>
         <Typography variant="h4" fontSize={{ xs: "24px", md: "36px" }}>

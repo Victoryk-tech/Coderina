@@ -48,7 +48,7 @@ const AboutSection = () => {
                   {description}
                 </Typography>
               </Stack>
-              <Image src={img} />
+              <Image src={img} alt="mage" />
             </Grid>
           ))}
         </Grid>

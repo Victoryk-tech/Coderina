@@ -50,7 +50,7 @@ const Partners = ({ sponsor }) => {
           <Grid container sx={{ p: "0 8em" }}>
             {legoLogos.map((logo) => (
               <Grid key={logo} size={{ xs: 12, md: 2 }}>
-                <img src={logo} alt="Partner logo" />
+                <Image src={logo} alt="Partner logo" />
               </Grid>
             ))}
           </Grid>

@@ -18,13 +18,6 @@ import {
 import Image from "next/image";
 
 const Footer = () => {
-  const footerIcons = [
-    <FaFacebookF />,
-    <AiFillInstagram />,
-    <FaYoutube />,
-    <FaXTwitter />,
-  ];
-
   const footerInfo = [
     {
       title: "Address",
@@ -77,7 +70,13 @@ const Footer = () => {
               className="object-cover w-52 h-10"
               priority
             />
-            <Stack>
+            <div className="flex items-center justify-center space-x-4">
+              <FaFacebookF size={24} />
+              <AiFillInstagram size={24} />
+              <FaYoutube size={24} />
+              <FaXTwitter size={24} />
+            </div>
+            {/* <Stack>
               {footerIcons.map((icon) => (
                 <IconButton
                   key={icon}
@@ -89,7 +88,7 @@ const Footer = () => {
                   {icon}
                 </IconButton>
               ))}
-            </Stack>
+            </Stack> */}
           </Stack>
           <Stack gap={{ xs: "1em", md: "5em" }}>
             {footerInfo.map((icon, i) => (

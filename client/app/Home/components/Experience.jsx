@@ -73,6 +73,7 @@ const Experience = () => {
                   <Image
                     src={card.image}
                     className="w-full h-full object-contain"
+                    alt=""
                     //style={{ objectFit: "cover" }}
                   />
                 </Card>
