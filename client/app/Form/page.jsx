@@ -171,7 +171,7 @@ const Register = () => {
                   </Stack>
                 ))}
                 <Stack alignItems={"end"}>
-                  <CustomButton isLarge>Register</CustomButton>
+                  <CustomButton>Register</CustomButton>
                 </Stack>
               </form>
             </Grid>

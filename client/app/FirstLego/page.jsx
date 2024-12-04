@@ -49,8 +49,8 @@ const FirstLego = () => {
 
   return (
     <Box className="first__lego">
-      {legoContent.map(({ color, section }) => (
-        <Box p={4} key={section} bgcolor={color}>
+      {legoContent.map(({ color, section }, index) => (
+        <Box p={4} key={index} bgcolor={(color || "transparent").toString()}>
           <Container maxWidth="xl">{section}</Container>
         </Box>
       ))}
@@ -59,5 +59,3 @@ const FirstLego = () => {
 };
 
 export default FirstLego;
-
-// https://youtu.be/i52coAkhX8g
