@@ -3,7 +3,7 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
 import LegoHeader from "./components/LegoHeader";
-import { blackColor, pinkBg, pinkBgR, whiteColor } from "../../utils/constants";
+import { blackColor, pinkBg, pinkBgR, whiteColor } from "../utils/constants";
 import Footer from "../Home/components/Footer";
 import Partners from "../Home/components/Partners";
 import LegoCard1 from "./components/LegoCard1";

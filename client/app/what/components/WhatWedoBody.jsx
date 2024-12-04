@@ -76,7 +76,7 @@ const WhatWedoBody = () => {
             Get Started <FaArrowRightLong />
           </CustomButton>
         </Stack>
-        <Image component={"img"} image={leagueImg} />
+        <Image src={leagueImg} alt="image" />
       </Stack>
       <Stack>
         <Paper
