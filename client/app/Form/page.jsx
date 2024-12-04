@@ -89,7 +89,7 @@ const Register = () => {
     <Box p={4}>
       <Container maxWidth="xl">
         <Stack className="register__form">
-          <Grid container>
+          <Grid classname="container">
             <Grid size={{ xs: 12, md: 5 }}>
               <Typography variant="h4">
                 Register for the Coderina® University Challenge (COUCH)
