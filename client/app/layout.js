@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-Inter">
         <div>
-          {/* <Navbar /> */}
+          <Navbar />
           <SessionProvider>{children}</SessionProvider>
         </div>
       </body>

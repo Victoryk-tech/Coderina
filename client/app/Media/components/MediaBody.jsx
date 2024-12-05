@@ -14,7 +14,7 @@ import Image from "next/image";
 import SolutionCards from "../../Home/components/SolutionCards";
 import { CiHeart } from "react-icons/ci";
 import { LuMessageCircle } from "react-icons/lu";
-
+import contentful from "contentful";
 const MediaBody = () => {
   const [mediaOption, setMediaOption] = useState("News Articles");
 
@@ -114,6 +114,8 @@ const MediaBody = () => {
 
   const mediaBtn = ["News Articles", "Publications", "Gallery"];
 
+  // contentful
+
   return (
     <Box mt={13} className="media__container">
       <Stack justifyContent={["center", "space-between"]}>
@@ -149,8 +151,12 @@ const MediaBody = () => {
         </Grid>
       ) : (
         <Grid container className="news__cards">
-          {newsArticles.map((newArticle, i) => (
-            <SolutionCards key={i} {...newArticle} childern={"Sep 2, 2023"} />
+          {newsArticles.map((newArticle, index) => (
+            <SolutionCards
+              key={index}
+              {...newArticle}
+              childern={"Sep 2, 2023"}
+            />
           ))}
           {/* comment and likes section */}
           <div className="flex items-center gap-2">

@@ -118,7 +118,7 @@ const WhatWedoBody = () => {
               <Stack>
                 <Stack>
                   {active.content.map((act) => (
-                    <Typography key={id} fontSize={{ xs: "9px", md: "18px" }}>
+                    <Typography key={act} fontSize={{ xs: "9px", md: "18px" }}>
                       {act}
                     </Typography>
                   ))}

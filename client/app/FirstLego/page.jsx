@@ -3,7 +3,6 @@
 import { Box, Container } from "@mui/material";
 import React from "react";
 import LegoHeader from "./components/LegoHeader";
-import { blackColor, pinkBg, pinkBgR, whiteColor } from "../utils/constants";
 import Footer from "../Home/components/Footer";
 import Partners from "../Home/components/Partners";
 import LegoCard1 from "./components/LegoCard1";
@@ -12,6 +11,7 @@ import LegoPrograms from "./components/LegoPrograms";
 import LegoImpact from "./components/LegoImpact";
 import LegoCard3 from "./components/LegoCard3";
 import Resources from "./components/Resources";
+import { blackColor, pinkBg, pinkBgR, whiteColor } from "../utils/constants";
 
 const FirstLego = () => {
   const legoContent = [
@@ -50,7 +50,13 @@ const FirstLego = () => {
   return (
     <Box className="first__lego">
       {legoContent.map(({ color, section }, index) => (
-        <Box p={4} key={index} bgcolor={(color || "transparent").toString()}>
+        <Box
+          key={index}
+          p={4}
+          bgcolor={color || "transparent"}
+          component="section"
+          aria-label={`Section ${index + 1}`}
+        >
           <Container maxWidth="xl">{section}</Container>
         </Box>
       ))}

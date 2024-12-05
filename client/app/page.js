@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Box, Container } from "@mui/material";
 import "./globals.css";
-// import  from '../../utils/constants'
+
 import Upcoming from "./Home/components/Upcoming";
 
 import News from "./Home/components/News";
@@ -22,7 +22,6 @@ import {
 import Header from "./Home/components/Header";
 import AboutSection from "./Home/components/AboutSection";
 import Activity from "./Home/components/Activity";
-import Navbar from "./Home/components/Navbar";
 
 export default function Home() {
   const homeContents1 = [
@@ -62,7 +61,6 @@ export default function Home() {
 
   return (
     <div className="font-Geist">
-      <Navbar />
       <Box overflow={"hidden"}>
         <Box bgcolor={headerBackground}>
           <Header />

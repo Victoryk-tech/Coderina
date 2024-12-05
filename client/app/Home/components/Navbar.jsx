@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Container, IconButton, Stack } from "@mui/material";
 import logo from "../../../public/coderinaLogo.png";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
 const Navbar = () => {
-  const [noBg, addBg] = useState("navTwo");
+  // const [noBg, addBg] = useState("navTwo");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const links = [
@@ -19,14 +19,22 @@ const Navbar = () => {
     { label: "Media", path: "/Media" },
   ];
 
-  const addBgColor = () => {
-    if (window.scrollY >= 10) {
-      addBg(whiteBg);
-    } else {
-      addBg("");
-    }
-  };
-  window.addEventListener("scroll", addBgColor);
+  const [noBg, setNoBg] = useState("transparent");
+
+  useEffect(() => {
+    const addBgColor = () => {
+      if (window.scrollY > 50) {
+        setNoBg("rgba(0, 0, 0, 0.8)");
+      } else {
+        setNoBg("transparent");
+      }
+    };
+
+    window.addEventListener("scroll", addBgColor);
+
+    // Cleanup on unmount
+    return () => window.removeEventListener("scroll", addBgColor);
+  }, []);
 
   return (
     <Box component={"nav"} className="nav__body" bgcolor={noBg}>
@@ -36,8 +44,8 @@ const Navbar = () => {
             <Image src={logo} alt="Coderina Logo" />
           </Link>
           <Stack display={{ xs: "none", md: "flex" }}>
-            {links.map(({ label, path }) => (
-              <Link href={path} key={label}>
+            {links.map(({ label, path }, index) => (
+              <Link href={path} key={`${label}-${index}`}>
                 {label}
               </Link>
             ))}
