@@ -1,7 +1,7 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
 import sap from "../../../public/Sap.png";
-import first from "../../../public/First.png";
+import first from "../../../public/first.png";
 import cater from "../../../public/Caterpillar.png";
 import dow from "../../../public/Dow.png";
 import fme from "../../../public/FME.png";
@@ -48,8 +48,8 @@ const Partners = ({ sponsor }) => {
         <Resources />
         <Stack className="partner__card">
           <Grid container sx={{ p: "0 8em" }}>
-            {legoLogos.map((logo) => (
-              <Grid key={logo} size={{ xs: 12, md: 2 }}>
+            {legoLogos.map((logo, index) => (
+              <Grid key={index} size={{ xs: 12, md: 2 }}>
                 <Image src={logo} alt="Partner logo" />
               </Grid>
             ))}
